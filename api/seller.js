@@ -8,7 +8,7 @@ const cache = new Map();
 
 function cleanOxmzoo(value) {
     if (typeof value == "string") {
-        return value.replace(/@oxmzoo/gi, "").trim();
+        return value.replace(/@Gaurav_Cyber/gi, "").trim();
     }
     if (Array.isArray(value)) {
         return value.map(cleanOxmzoo);
@@ -94,7 +94,7 @@ export default async function handler(req, res) {
             // JSON try parse
             let data = JSON.parse(raw);
 
-            // @oxmzoo clean
+            // @Gaurav_Cyber clean
             data = cleanOxmzoo(data);
 
             // Apna clean branding
@@ -104,8 +104,8 @@ export default async function handler(req, res) {
 
             responseBody = JSON.stringify(data);
         } catch (e) {
-            // Agar JSON nahi hai, to raw text se @oxmzoo hata do
-            const cleanedText = raw.replace(/@oxmzoo/gi, "").trim();
+            // Agar JSON nahi hai, to raw text se @Gaurav_Cyber hata do
+            const cleanedText = raw.replace(/@Gaurav_Cyber/gi, "").trim();
             responseBody = cleanedText;
         }
 
